@@ -1,0 +1,138 @@
+<html>
+<head>
+<title> Minesweeper </title>
+<style>
+.squares {
+height:50px;
+width:50px;
+}
+</style>
+<script>
+	var b=new Array(6)
+	for(k=0;k<7;k++) {
+		var i=parseInt(Math.random()*10)%6+1;
+		var j=parseInt(Math.random()*10)%7+1;
+		b[k]=10*j+i;
+		console.log(10*j+i);
+	}
+	var count=0;
+	function change(a) {
+		if((parseInt(a.id)-b[0]===0)||(parseInt(a.id)-b[1]===0)||(parseInt(a.id)-b[2]===0)||(parseInt(a.id)-b[3]===0)||(parseInt(a.id)-b[4]===0)||(parseInt(a.id)-b[5]===0)||(parseInt(a.id)-b[6]===0)) {
+ 
+     		for(k=0;k<7;k++) {
+        		d=document.getElementById(b[k]+"s")
+        		d.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/sad.png";
+     		}
+    	return 0; 
+	}
+	else {
+               for(k=0;k<7;k++) {
+			if(b[k]-(parseInt(a.id)-01)===0) 
+               	count++;
+               }
+               for(k=0;k<7;k++) {
+			if(b[k]-(parseInt(a.id)-10)===0) 
+               	count++;
+               }
+               for(k=0;k<7;k++) {
+			if(b[k]-(parseInt(a.id)-11)===0) 
+               	count++;
+               }
+               for(k=0;k<7;k++) {
+			if(b[k]-(parseInt(a.id)-09)===0) 
+               	count++;
+               }
+               for(k=0;k<7;k++) {
+			if(b[k]-(parseInt(a.id)+01)===0) 
+               	count++;
+               }
+               for(k=0;k<7;k++) {
+			if(b[k]-(parseInt(a.id)+10)===0) 
+               	count++;
+               }
+               for(k=0;k<7;k++) {
+			if(b[k]-(parseInt(a.id)+09)===0) 
+               	count++;
+               }
+               for(k=0;k<7;k++) {
+			if(b[k]-(parseInt(a.id)+11)===0) 
+               	count++;
+               }
+	}
+	
+switch(count) {
+case 0: a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/0.png"; break;
+case 1: a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/1.png"; break;
+case 2: a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/2.png"; break;
+case 3: a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/3.png"; break;
+case 4: a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/4.png"; break;
+case 5: a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/5.png"; break;
+case 6: a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/6.png"; break;
+case 7: a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/7.png"; break;
+case 8: a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/8.png"; break;
+}
+}
+function rclick(a) {
+a.src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/flag.png";
+event.preventDefault();
+}
+
+</script>
+
+</head>
+<body bgcolor="cream">
+<font face="Verdana" color="purple" size="5">
+<marquee> Welcome!! </marquee>
+</font>
+
+
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="11s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="21s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="31s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="41s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="51s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="61s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="71s" onclick="change(this)">
+<br>
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="12s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="22s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="32s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="42s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="52s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="62s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="72s" onclick="change(this)">
+<br>
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="13s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="23s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="33s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="43s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="53s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="63s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="73s" onclick="change(this)">
+<br>
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="14s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="24s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="34s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="44s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="54s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="64s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="74s" onclick="change(this)">
+<br>
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="15s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="25s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="35s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="45s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="55s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="65s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="75s" onclick="change(this)">
+<br>
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="16s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="26s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="36s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="46s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="56s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="66s" onclick="change(this)">
+<img oncontextmenu="rclick(this)" src="C:/Documents and Settings/Administrator/Desktop/webops/minesweeper_files/up.png" class="squares" id="76s" onclick="change(this)">
+<br>
+</body>
+</html>

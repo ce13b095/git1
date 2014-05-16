@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>{{ a.user_id }}</title>
+<style>
+#1 {
+position:absolute;
+top:100px;
+left:800px;
+}
+</style>
+</head>
+<body>
+  {% load staticfiles %}
+  <img id="1" src= "{% static "{{a.user_id}}.jpg" %}" /> <br>
+  
+                    
+<font face="Comic Sans MS">
+User ID:{{a.user_id}} <br>
+First Name:{{a.first_name}}<br>
+Last Name:{{a.last_name} <br>
+E-mail ID: {{a.email}} <br>
+Number of projects:{{a.no_projects}} <br>
+Points Earned:{{a.points_earned}} <br>
+Skills: {{a.skills}} <br>
+Number of sessions: {{a.no_sessions}} <br>
+</font>
+</body>
+</html>
